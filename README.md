@@ -9,6 +9,8 @@ released 10.18.2018<br>
 
 version 1.0<br>
 
+requires minimum PHP 5.5.0<br>
+
 Php Password Hash Generator<br>
 
 - generates standard hash password<br>
