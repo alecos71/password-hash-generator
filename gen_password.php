@@ -106,7 +106,7 @@ body {
 <div class="wrapper">
 <span class="title">Password Generator</span>
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-<label for="pass">Password:</label>&nbsp;&nbsp;<input class="password" type="password" name="pass" id="pass" value="<?php echo isset($_POST['pass']) ? htmlspecialchars($_POST['pass']) : ''; ?>">&nbsp;&nbsp;<input class="password" readonly="readonly" type="text" style="width: 440px" name="pass_cripted" id="pass_cripted" value="<?php echo isset($_POST['pass']) && !empty($_POST['pass']) ? password_hash($_POST['pass'], PASSWORD_DEFAULT) : ''; ?>">&nbsp;&nbsp;<input class="generate" type="submit" name="submit" value="Generate">
+<label for="pass">Password:</label>&nbsp;&nbsp;<input class="password" type="password" name="pass" id="pass" value="<?php echo isset($_POST['pass']) && !empty($_POST['pass']) ? htmlspecialchars($_POST['pass']) : ''; ?>">&nbsp;&nbsp;<input class="password" readonly="readonly" type="text" style="width: 440px" name="pass_cripted" id="pass_cripted" value="<?php echo isset($_POST['pass']) && !empty($_POST['pass']) ? password_hash($_POST['pass'], PASSWORD_DEFAULT) : ''; ?>">&nbsp;&nbsp;<input class="generate" type="submit" name="submit" value="Generate">
 </form>
 </div>
 </body>
