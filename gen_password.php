@@ -1,14 +1,17 @@
 <?php
   ##############################################################################
-  # Password Hash Generator - 1.0 - 10.18.2018 © Alessandro Marinuzzi - G.P.L. #
+  # Password Hash Generator - 1.1 - 16.11.2020 © Alessandro Marinuzzi - G.P.L. #
   # this script generates password for using with password_verify php function #
   ##############################################################################
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
+
 <head>
-<meta http-equiv="content-type" content="text/html;charset=utf-8">
-<meta name="author" content="Alessandro Marinuzzi [Alecos]">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Alecos [Alessandro Marinuzzi]">
 <meta name="generator" content="Notepad2">
 <meta name="pragma" content="no-cache">
 <meta name="robots" content="noindex, nofollow">
@@ -105,8 +108,8 @@ body {
 <body>
 <div class="wrapper">
 <span class="title">Password Generator</span>
-<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-<label for="pass">Password:</label>&nbsp;&nbsp;<input class="password" type="password" name="pass" id="pass" value="<?php echo isset($_POST['pass']) && !empty($_POST['pass']) ? htmlspecialchars($_POST['pass']) : ''; ?>">&nbsp;&nbsp;<input class="password" readonly="readonly" type="text" style="width: 440px" name="pass_cripted" id="pass_cripted" value="<?php echo isset($_POST['pass']) && !empty($_POST['pass']) ? password_hash($_POST['pass'], PASSWORD_DEFAULT) : ''; ?>">&nbsp;&nbsp;<input class="generate" type="submit" name="submit" value="Generate">
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'], ENT_QUOTES | ENT_HTML401, 'UTF-8'); ?>" method="post">
+<label for="pass">Password:</label>&nbsp;&nbsp;<input class="password" type="password" name="pass" id="pass" value="<?php echo isset($_POST['pass']) && !empty($_POST['pass']) ? htmlspecialchars($_POST['pass'], ENT_NOQUOTES | ENT_HTML401, 'UTF-8') : ''; ?>">&nbsp;&nbsp;<input class="password" readonly="readonly" type="text" style="width: 440px" name="pass_cripted" id="pass_cripted" value="<?php echo isset($_POST['pass']) && !empty($_POST['pass']) ? password_hash($_POST['pass'], PASSWORD_DEFAULT) : ''; ?>">&nbsp;&nbsp;<input class="generate" type="submit" name="submit" value="Generate">
 </form>
 </div>
 </body>

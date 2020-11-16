@@ -7,7 +7,9 @@ website https://www.alecos.it/<br>
 
 released 10.18.2018<br>
 
-version 1.0<br>
+revised 16.11.2020<br>
+
+version 1.1<br>
 
 requires minimum PHP 5.5.0<br>
 
